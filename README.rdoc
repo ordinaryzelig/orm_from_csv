@@ -1,0 +1,28 @@
+= ORM From CSV
+
+A super simple way (137 characters of code) of instantiating ORM objects from a CSV file.
+Supports any Ruby class that accepts a hash of attributes like ActiveRecord:
+
+  class ActiveRecord::Base
+    def initialize(attributes = {})
+    # ...
+
+== Usage
+
+The following would read in a CSV file and return instantiated objects with attributes from the file:
+
+  SomeModel.from_csv(csv_file)
+
+=== Rails/ActiveRecord:
+
+  ActiveRecord::Base.extend ORMFromCSV
+
+=== Other ORMs
+
+  Haven't tested with any others.
+  It shouldn't be difficult to integrate with others. The only assumption made is that YourModel.new() should accept a hash of attributes and assign them. See spec/support/models/movie.rb for an example.
+
+== Related gems
+
+* https://github.com/ordinaryzelig/active_record_csv
+* https://github.com/ordinaryzelig/active_record_to_csv
