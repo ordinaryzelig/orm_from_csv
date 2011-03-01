@@ -7,11 +7,15 @@ Supports any Ruby class that accepts a hash of attributes like ActiveRecord:
     def initialize(attributes = {})
     # ...
 
+For ActiveRecord-specific usage, see the active_record_csv gem link below.
+
 == Usage
 
 The following would read in a CSV file and return instantiated objects with attributes from the file:
 
   SomeModel.from_csv(csv_file)
+
+Note that it does not save the objects since that is dependent on what ORM you use.
 
 === Rails/ActiveRecord:
 
@@ -19,8 +23,8 @@ The following would read in a CSV file and return instantiated objects with attr
 
 === Other ORMs
 
-  Haven't tested with any others.
-  It shouldn't be difficult to integrate with others. The only assumption made is that YourModel.new() should accept a hash of attributes and assign them. See spec/support/models/movie.rb for an example.
+Haven't tested with any others.
+It shouldn't be difficult to integrate with others. The only assumption made is that YourModel.new() should accept a hash of attributes and assign them. See spec/support/models/movie.rb for an example.
 
 == Related gems
 
