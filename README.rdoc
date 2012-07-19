@@ -1,5 +1,7 @@
 = ORM From CSV
 
+https://github.com/ordinaryzelig/orm_from_csv
+
 A super simple way (137 characters of code) of instantiating ORM objects from a CSV file.
 Supports any Ruby class that accepts a hash of attributes like ActiveRecord:
 

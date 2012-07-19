@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jared Ning"]
   s.email       = ["jared@redningja.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/ordinaryzelig/orm_from_csv"
   s.summary     = %q{Create instances of ORM objects from CSV}
   s.description = %q{Create instances of ORM (like ActiveRecord or Mongoid, anything that supports Model.new(attributes_as_hash)) objects from CSV}
 
